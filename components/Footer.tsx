@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Instagram, Youtube, Twitter, Mail, Phone } from "lucide-react"
-import { siteConfig } from "@/data/site"
-import { disclaimer } from "@/data/pricing"
+import Link from "next/link";
+import { Instagram, Youtube, Twitter, Mail, Phone } from "lucide-react";
+import { siteConfig } from "@/data/site";
+import { disclaimer } from "@/data/pricing";
 
 const iconMap = {
   Instagram,
@@ -9,7 +9,7 @@ const iconMap = {
   Twitter,
   Mail,
   Phone,
-}
+};
 
 export function Footer() {
   return (
@@ -24,7 +24,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               {siteConfig.socials.map((social) => {
-                const Icon = iconMap[social.icon as keyof typeof iconMap]
+                const Icon = iconMap[social.icon as keyof typeof iconMap];
                 return (
                   <Link
                     key={social.name}
@@ -34,14 +34,14 @@ export function Footer() {
                   >
                     <Icon className="h-5 w-5" />
                   </Link>
-                )
+                );
               })}
             </div>
           </div>
 
           {/* Navigation */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">Navigatie</h4>
+            <h4 className="text-sm font-semibold">Navigation</h4>
             <ul className="space-y-2">
               {siteConfig.nav.slice(0, 4).map((item) => (
                 <li key={item.href}>
@@ -107,5 +107,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

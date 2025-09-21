@@ -1,99 +1,105 @@
 export const streamSchedule = [
   {
     id: "monday-market-prep",
-    day: "Maandag",
+    day: "Monday",
     time: "19:00 - 20:30 CET",
     title: "Week Start Market Analysis",
-    description: "Weekly market outlook, key levels identificeren en trading plan voor de week opstellen.",
+    description:
+      "Weekly market outlook, identify key levels and set up trading plan for the week.",
     duration: "90 min",
     type: "analyse",
     recurring: true,
   },
   {
     id: "wednesday-live-trading",
-    day: "Woensdag",
+    day: "Wednesday",
     time: "20:00 - 21:00 CET",
     title: "Live Trading Session",
-    description: "Real-time trading met live market analyse, entry/exit timing en risk management.",
+    description:
+      "Real-time trading with live market analysis, entry/exit timing and risk management.",
     duration: "60 min",
     type: "trading",
     recurring: true,
   },
   {
     id: "friday-week-review",
-    day: "Vrijdag",
+    day: "Friday",
     time: "18:30 - 20:00 CET",
     title: "Week Review & Q&A",
-    description: "Terugblik op de week, trade reviews, Q&A sessie en voorbereiding volgende week.",
+    description:
+      "Look back on the week, trade reviews, Q&A session and preparation for next week.",
     duration: "90 min",
     type: "review",
     recurring: true,
   },
-]
+];
 
 export const streamTopics = [
   {
     category: "Market Analysis",
     topics: [
-      "Daily & weekly market structure analyse",
-      "Key support en resistance levels",
+      "Daily & weekly market structure analysis",
+      "Key support and resistance levels",
       "Institutional order flow reading",
-      "News impact en event trading",
+      "News impact and event trading",
       "Multi-timeframe correlation",
     ],
   },
   {
     category: "Live Trading",
     topics: [
-      "Real-time entry en exit strategieën",
-      "Risk management tijdens trades",
+      "Real-time entry and exit strategies",
+      "Risk management during trades",
       "Position sizing decisions",
-      "Stop loss en take profit plaatsing",
-      "Trade management en scaling",
+      "Stop loss and take profit placement",
+      "Trade management and scaling",
     ],
   },
   {
     category: "Educational Content",
     topics: [
-      "SMC concept uitleg met voorbeelden",
-      "Common mistakes en hoe te vermijden",
-      "Psychology tips en mindset coaching",
-      "Platform setup en tools demonstratie",
-      "Q&A en community feedback",
+      "SMC concept explanation with examples",
+      "Common mistakes and how to avoid them",
+      "Psychology tips and mindset coaching",
+      "Platform setup and tools demonstration",
+      "Q&A and community feedback",
     ],
   },
-]
+];
 
 export const streamFeatures = [
   {
-    feature: "Live Interactie",
-    description: "Chat mee tijdens streams, stel vragen en krijg directe feedback",
+    feature: "Live Interaction",
+    description:
+      "Chat along during streams, ask questions and get direct feedback",
     icon: "MessageSquare",
   },
   {
-    feature: "Opnames Beschikbaar",
-    description: "Mis je een stream? Alle opnames zijn beschikbaar voor terugkijken",
+    feature: "Recordings Available",
+    description: "Miss a stream? All recordings are available for replay",
     icon: "Video",
   },
   {
     feature: "Screen Sharing",
-    description: "Zie exact hoe Aaron de charts analyseert en trades uitvoert",
+    description: "See exactly how Aaron analyzes charts and executes trades",
     icon: "Monitor",
   },
   {
     feature: "Trade Alerts",
-    description: "Ontvang alerts voor interessante setups die tijdens streams besproken worden",
+    description:
+      "Receive alerts for interesting setups discussed during streams",
     icon: "Bell",
   },
-]
+];
 
 export const streamPlatform = {
   name: "YouTube Live",
-  description: "Streams worden gehouden op een privé YouTube kanaal toegankelijk voor leden",
+  description:
+    "Streams are held on a private YouTube channel accessible to members",
   requirements: [
-    "Stabiele internetverbinding",
-    "Computer, tablet of smartphone",
-    "YouTube account voor chat participatie",
+    "Stable internet connection",
+    "Computer, tablet or smartphone",
+    "YouTube account for chat participation",
   ],
-  accessNote: "Link wordt gedeeld na aanmelding",
-}
+  accessNote: "Link is shared after registration",
+};

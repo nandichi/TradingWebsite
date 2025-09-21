@@ -1,15 +1,23 @@
-import { Metadata } from 'next'
-import { User, Award, Target, Heart } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { CTABanner } from '@/components/CTABanner'
-import { generatePageMetadata } from '@/lib/seo'
-import { motion } from 'framer-motion'
+import { Metadata } from "next";
+import { User, Award, Target, Heart } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { CTABanner } from "@/components/CTABanner";
+import { generatePageMetadata } from "@/lib/seo";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Over Aaron Reugebrink',
-  description: 'Leer meer over Aaron Reugebrink, crypto trading mentor gespecialiseerd in Smart Money Concepts. Ervaring, filosofie en aanpak.',
-  path: '/over',
-})
+  title: "About Aaron Haden",
+  description:
+    "Learn more about Aaron Haden, crypto trading mentor specialized in Smart Money Concepts. Experience, philosophy and approach.",
+  path: "/over",
+});
 
 export default function OverPage() {
   return (
@@ -18,39 +26,49 @@ export default function OverPage() {
         <div className="container max-w-4xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Over Aaron Reugebrink
+              About Aaron Haden
             </h1>
             <p className="text-xl text-muted-foreground">
-              Van traditionele analyse naar Smart Money Concepts
+              From traditional analysis to Smart Money Concepts
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {/* Photo placeholder */}
+            {/* Photo */}
             <div className="lg:col-span-1">
-              <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center">
-                <User className="h-24 w-24 text-muted-foreground" />
+              <div className="aspect-square bg-muted rounded-2xl overflow-hidden">
+                <Image
+                  src="/aaron-haden.jpg"
+                  alt="Aaron Haden - Crypto Trading Mentor"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
 
             {/* Bio */}
             <div className="lg:col-span-2 space-y-6">
-              <h2 className="text-2xl font-bold">Mijn verhaal</h2>
+              <h2 className="text-2xl font-bold">My story</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Mijn reis in de crypto wereld begon 5 jaar geleden met traditionele technische analyse. 
-                  Na jaren van inconsistente resultaten en frustratie, ontdekte ik Smart Money Concepts - 
-                  een benadering die de markt bekijkt vanuit het perspectief van institutionele traders.
+                  My journey in the crypto world started 5 years ago with
+                  traditional technical analysis. After years of inconsistent
+                  results and frustration, I discovered Smart Money Concepts -
+                  an approach that views the market from the perspective of
+                  institutional traders.
                 </p>
                 <p>
-                  Deze shift in mindset veranderde alles. Plots begon ik de markt te begrijpen zoals de 
-                  'grote spelers' dat doen. Liquidity grabs, order blocks, fair value gaps - concepten 
-                  die me hielpen om consistent profitable te worden.
+                  This shift in mindset changed everything. Suddenly I began to
+                  understand the market like the 'big players' do. Liquidity
+                  grabs, order blocks, fair value gaps - concepts that helped me
+                  become consistently profitable.
                 </p>
                 <p>
-                  Nu help ik anderen om dezelfde transformatie te maken. Niet door valse beloften van 
-                  snelle rijkdom, maar door gedegen educatie, sterke risicobeheer en een haalbare aanpak 
-                  van trading.
+                  Now I help others make the same transformation. Not through
+                  false promises of quick wealth, but through solid education,
+                  strong risk management and a realistic approach to trading.
                 </p>
               </div>
             </div>
@@ -65,8 +83,9 @@ export default function OverPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  5+ jaar ervaring in crypto trading met focus op Smart Money Concepts. 
-                  200+ studenten succesvol begeleid naar consistent trading.
+                  5+ years experience in crypto trading with focus on Smart
+                  Money Concepts. 200+ students successfully guided to
+                  consistent trading.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -74,12 +93,12 @@ export default function OverPage() {
             <Card>
               <CardHeader>
                 <Target className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Aanpak</CardTitle>
+                <CardTitle>Approach</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Gestructureerd curriculum met focus op risicobeheer. Geen shortcuts, 
-                  maar een solide fundament voor lange termijn succes.
+                  Structured curriculum with focus on risk management. No
+                  shortcuts, but a solid foundation for long-term success.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -87,12 +106,12 @@ export default function OverPage() {
             <Card>
               <CardHeader>
                 <Heart className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Filosofie</CardTitle>
+                <CardTitle>Philosophy</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Trading is 80% psychologie en 20% techniek. Ik leer je niet alleen 
-                  hoe je wint, maar vooral hoe je verlies voorkomt.
+                  Trading is 80% psychology and 20% technique. I teach you not
+                  only how to win, but especially how to prevent losses.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -100,26 +119,26 @@ export default function OverPage() {
 
           {/* Approach */}
           <div className="bg-muted/20 rounded-2xl p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-center">Mijn aanpak</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">My approach</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-3">Wat ik WEL doe:</h3>
+                <h3 className="text-lg font-semibold mb-3">What I DO:</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Gedegen SMC educatie vanuit institutionele perspectief</li>
-                  <li>• Focus op risicobeheer en capital preservation</li>
-                  <li>• Realistische verwachtingen en doelen stellen</li>
-                  <li>• Persoonlijke begeleiding en feedback</li>
-                  <li>• Community support en accountability</li>
+                  <li>• Solid SMC education from institutional perspective</li>
+                  <li>• Focus on risk management and capital preservation</li>
+                  <li>• Setting realistic expectations and goals</li>
+                  <li>• Personal guidance and feedback</li>
+                  <li>• Community support and accountability</li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3">Wat ik NIET doe:</h3>
+                <h3 className="text-lg font-semibold mb-3">What I DON'T do:</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Beloftes van gegarandeerde winsten</li>
+                  <li>• Promises of guaranteed profits</li>
                   <li>• "Get rich quick" schemes</li>
-                  <li>• Emotioneel manipulatieve marketing</li>
-                  <li>• Onrealistische income claims</li>
-                  <li>• Verkoop van trading signals</li>
+                  <li>• Emotionally manipulative marketing</li>
+                  <li>• Unrealistic income claims</li>
+                  <li>• Selling trading signals</li>
                 </ul>
               </div>
             </div>
@@ -128,9 +147,9 @@ export default function OverPage() {
       </section>
 
       <CTABanner
-        title="Klaar om samen te werken?"
-        description="Boek een gratis intake gesprek en ontdek hoe mijn aanpak jou kan helpen om consistent profitable te worden."
+        title="Ready to work together?"
+        description="Book a free intake call and discover how my approach can help you become consistently profitable."
       />
     </>
-  )
+  );
 }

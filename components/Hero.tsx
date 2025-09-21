@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ArrowRight, Calendar } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { siteConfig } from "@/data/site"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import { ArrowRight, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/data/site";
+import { motion } from "framer-motion";
 
 export function Hero() {
   return (
@@ -18,13 +18,13 @@ export function Hero() {
           className="space-y-6"
         >
           <Badge variant="secondary" className="mb-4">
-            Gratis 15-min intake gesprek
+            Free 15-min intake call
           </Badge>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             {siteConfig.hero.title}
           </h1>
-          
+
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {siteConfig.hero.subtitle}
           </p>
@@ -37,11 +37,9 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            
+
             <Button variant="outline" size="lg" asChild>
-              <Link href="/mentorship">
-                {siteConfig.hero.secondaryCTA}
-              </Link>
+              <Link href="/mentorship">{siteConfig.hero.secondaryCTA}</Link>
             </Button>
           </div>
 
@@ -68,5 +66,5 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

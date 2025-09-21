@@ -33,10 +33,10 @@ export function TestimonialCarousel() {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Wat studenten zeggen
+            What students say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Echte resultaten van echte mensen die het SMC traject hebben gevolgd
+            Real results from real people who followed the SMC journey
           </p>
         </div>
 
@@ -44,11 +44,11 @@ export function TestimonialCarousel() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
           <div>
             <div className="text-3xl font-bold text-primary">{testimonialStats.totalStudents}</div>
-            <div className="text-sm text-muted-foreground">Studenten begeleid</div>
+            <div className="text-sm text-muted-foreground">Students mentored</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-primary">{testimonialStats.averageRating}</div>
-            <div className="text-sm text-muted-foreground">Gemiddelde waardering</div>
+            <div className="text-sm text-muted-foreground">Average rating</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-primary">{testimonialStats.successRate}</div>
@@ -56,7 +56,7 @@ export function TestimonialCarousel() {
           </div>
           <div>
             <div className="text-3xl font-bold text-primary">{testimonialStats.monthsActive}</div>
-            <div className="text-sm text-muted-foreground">Maanden actief</div>
+            <div className="text-sm text-muted-foreground">Months active</div>
           </div>
         </div>
 

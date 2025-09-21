@@ -1,19 +1,26 @@
-import { Metadata } from 'next'
-import { Check, X, Clock, Users, MessageCircle, Target } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { CurriculumModules } from '@/components/CurriculumModules'
-import { CTABanner } from '@/components/CTABanner'
-import { generatePageMetadata } from '@/lib/seo'
-import { pricingTiers, disclaimer } from '@/data/pricing'
+import { Metadata } from "next";
+import { Check, X, Clock, Users, MessageCircle, Target } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { CurriculumModules } from "@/components/CurriculumModules";
+import { CTABanner } from "@/components/CTABanner";
+import { generatePageMetadata } from "@/lib/seo";
+import { pricingTiers, disclaimer } from "@/data/pricing";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: '1-op-1 Mentorship - Persoonlijke Trading Begeleiding',
-  description: 'Intensieve 1-op-1 crypto trading mentorship met Smart Money Concepts. Wekelijkse sessies, persoonlijke roadmap en directe feedback.',
-  path: '/mentorship',
-})
+  title: "1-on-1 Mentorship - Personal Trading Guidance",
+  description:
+    "Intensive 1-on-1 crypto trading mentorship with Smart Money Concepts. Weekly sessions, personal roadmap and direct feedback.",
+  path: "/mentorship",
+});
 
-const oneOnOneTier = pricingTiers.find(tier => tier.id === 'one-on-one')!
+const oneOnOneTier = pricingTiers.find((tier) => tier.id === "one-on-one")!;
 
 export default function MentorshipPage() {
   return (
@@ -25,11 +32,12 @@ export default function MentorshipPage() {
               Premium Mentorship
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              1-op-1 Mentorship
+              1-on-1 Mentorship
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              De meest intensieve vorm van begeleiding met volledige persoonlijke aandacht. 
-              Maatwerk training speciaal voor jouw trading doelen en uitdagingen.
+              The most intensive form of guidance with full personal attention.
+              Custom training specifically for your trading goals and
+              challenges.
             </p>
           </div>
 
@@ -38,12 +46,12 @@ export default function MentorshipPage() {
             <Card>
               <CardHeader>
                 <Users className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Persoonlijke Aandacht</CardTitle>
+                <CardTitle>Personal Attention</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  100% focus op jouw situatie, doelen en uitdagingen. Geen afleidingen, 
-                  geen wachtlijsten, gewoon pure persoonlijke begeleiding.
+                  100% focus on your situation, goals and challenges. No
+                  distractions, no waiting lists, just pure personal guidance.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -51,12 +59,12 @@ export default function MentorshipPage() {
             <Card>
               <CardHeader>
                 <Target className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Maatwerk Curriculum</CardTitle>
+                <CardTitle>Custom Curriculum</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Jouw leertraject wordt volledig aangepast aan je ervaring, beschikbare tijd 
-                  en specifieke trading doelen.
+                  Your learning path is completely adapted to your experience,
+                  available time and specific trading goals.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -64,12 +72,12 @@ export default function MentorshipPage() {
             <Card>
               <CardHeader>
                 <MessageCircle className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Directe Support</CardTitle>
+                <CardTitle>Direct Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  WhatsApp toegang tijdens kantooruren voor directe vragen en 
-                  real-time feedback op je trades.
+                  WhatsApp access during office hours for direct questions and
+                  real-time feedback on your trades.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -78,7 +86,7 @@ export default function MentorshipPage() {
           {/* What's Included */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-3xl font-bold mb-8">Wat is inbegrepen</h2>
+              <h2 className="text-3xl font-bold mb-8">What's included</h2>
               <div className="space-y-4">
                 {oneOnOneTier.features.map((feature) => (
                   <div key={feature} className="flex items-start space-x-3">
@@ -90,14 +98,14 @@ export default function MentorshipPage() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-8">Wat je NIET krijgt</h2>
+              <h2 className="text-3xl font-bold mb-8">What you DON'T get</h2>
               <div className="space-y-4">
                 {[
-                  "Gegarandeerde winsten of income claims",
-                  "Trading signals of copy-trading",
-                  "24/7 beschikbaarheid (alleen kantooruren)",
-                  "Financieel advies of investment recommendations",
-                  "Support voor andere trading strategieën dan SMC"
+                  "Guaranteed profits or income claims",
+                  "Trading signals or copy-trading",
+                  "24/7 availability (office hours only)",
+                  "Financial advice or investment recommendations",
+                  "Support for trading strategies other than SMC",
                 ].map((item) => (
                   <div key={item} className="flex items-start space-x-3">
                     <X className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
@@ -112,9 +120,7 @@ export default function MentorshipPage() {
           <div className="max-w-md mx-auto mb-16">
             <Card className="border-primary shadow-lg">
               <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4">
-                  Meest Populair
-                </Badge>
+                <Badge className="w-fit mx-auto mb-4">Most Popular</Badge>
                 <CardTitle className="text-2xl">{oneOnOneTier.name}</CardTitle>
                 <CardDescription>{oneOnOneTier.subtitle}</CardDescription>
                 <div className="text-3xl font-bold text-primary pt-4">
@@ -129,7 +135,7 @@ export default function MentorshipPage() {
                   title=""
                   description=""
                   primaryText={oneOnOneTier.cta}
-                  secondaryText="Meer info"
+                  secondaryText="More info"
                   className="!py-0 !bg-primary"
                 />
               </CardContent>
@@ -138,36 +144,44 @@ export default function MentorshipPage() {
 
           {/* Process */}
           <div className="bg-muted/20 rounded-2xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Hoe werkt het?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              How does it work?
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
                 {
                   step: "1",
-                  title: "Intake Gesprek",
-                  description: "Gratis 15-min kennismaking om doelen en verwachtingen te bespreken"
+                  title: "Intake Call",
+                  description:
+                    "Free 15-min introduction to discuss goals and expectations",
                 },
                 {
-                  step: "2", 
-                  title: "Persoonlijke Roadmap",
-                  description: "Op maat gemaakt curriculum gebaseerd op je ervaring en doelen"
+                  step: "2",
+                  title: "Personal Roadmap",
+                  description:
+                    "Custom-made curriculum based on your experience and goals",
                 },
                 {
                   step: "3",
-                  title: "Wekelijkse Sessies",
-                  description: "60-90 min persoonlijke sessies met theorie, praktijk en Q&A"
+                  title: "Weekly Sessions",
+                  description:
+                    "60-90 min personal sessions with theory, practice and Q&A",
                 },
                 {
                   step: "4",
-                  title: "Doorlopende Support",
-                  description: "WhatsApp support en trade reviews tussen sessies door"
-                }
+                  title: "Ongoing Support",
+                  description:
+                    "WhatsApp support and trade reviews between sessions",
+                },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
                     {item.step}
                   </div>
                   <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -183,13 +197,13 @@ export default function MentorshipPage() {
       </section>
 
       <CurriculumModules />
-      
+
       <CTABanner
-        title="Start je 1-op-1 traject"
-        description="Plan een gratis intake gesprek en ontdek hoe persoonlijke begeleiding jouw trading naar het volgende level kan brengen."
-        primaryText="Plan intake gesprek"
-        secondaryText="Bekijk andere opties"
+        title="Start your 1-on-1 journey"
+        description="Schedule a free intake call and discover how personal guidance can take your trading to the next level."
+        primaryText="Schedule intake call"
+        secondaryText="View other options"
       />
     </>
-  )
+  );
 }

@@ -1,17 +1,30 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { Calendar, MessageCircle, Mail, Clock, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { generatePageMetadata } from '@/lib/seo'
-import { siteConfig } from '@/data/site'
+import { Metadata } from "next";
+import Link from "next/link";
+import {
+  Calendar,
+  MessageCircle,
+  Mail,
+  Clock,
+  CheckCircle,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { generatePageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Contact & Intake Gesprek Plannen',
-  description: 'Plan een gratis 15-minuten intake gesprek voor crypto trading mentorship. WhatsApp, email of Calendly beschikbaar.',
-  path: '/contact',
-})
+  title: "Contact & Schedule Intake Call",
+  description:
+    "Schedule a free 15-minute intake call for crypto trading mentorship. WhatsApp, email or Calendly available.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -20,14 +33,15 @@ export default function ContactPage() {
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4">
-              Gratis kennismaking
+              Free introduction
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Plan je Intake Gesprek
+              Schedule Your Intake Call
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              De eerste stap naar consistent profitable trading begint met een 
-              gratis 15-minuten kennismakingsgesprek. Geen verplichtingen, gewoon een open gesprek.
+              The first step towards consistently profitable trading starts with
+              a free 15-minute introduction call. No obligations, just an open
+              conversation.
             </p>
           </div>
 
@@ -37,16 +51,16 @@ export default function ContactPage() {
               <CardHeader className="text-center">
                 <Calendar className="h-12 w-12 text-primary mx-auto mb-4" />
                 <CardTitle>Calendly</CardTitle>
-                <CardDescription>Plan direct online</CardDescription>
+                <CardDescription>Schedule directly online</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-sm text-muted-foreground mb-6">
-                  Kies een tijdslot dat jou uitkomt in mijn online agenda. 
-                  Direct bevestiging en herinnering via email.
+                  Choose a time slot that works for you in my online calendar.
+                  Instant confirmation and reminder via email.
                 </p>
                 <Button asChild className="w-full">
                   <Link href={siteConfig.contact.calendlyUrl}>
-                    Plan via Calendly
+                    Schedule via Calendly
                   </Link>
                 </Button>
               </CardContent>
@@ -60,12 +74,12 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-sm text-muted-foreground mb-6">
-                  Stuur me een berichtje via WhatsApp en ik plan persoonlijk 
-                  een geschikt moment voor ons gesprek in.
+                  Send me a message via WhatsApp and I'll personally schedule a
+                  suitable time for our conversation.
                 </p>
                 <Button asChild variant="outline" className="w-full">
                   <Link href={siteConfig.contact.whatsappUrl}>
-                    WhatsApp sturen
+                    Send WhatsApp
                   </Link>
                 </Button>
               </CardContent>
@@ -75,16 +89,16 @@ export default function ContactPage() {
               <CardHeader className="text-center">
                 <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
                 <CardTitle>Email</CardTitle>
-                <CardDescription>Traditioneel contact</CardDescription>
+                <CardDescription>Traditional contact</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-sm text-muted-foreground mb-6">
-                  Liever via email? Stuur me je vraag en beschikbaarheid, 
-                  dan reageer ik binnen 24 uur.
+                  Prefer email? Send me your question and availability, and I'll
+                  respond within 24 hours.
                 </p>
                 <Button asChild variant="outline" className="w-full">
                   <Link href={`mailto:${siteConfig.contact.email}`}>
-                    Email versturen
+                    Send email
                   </Link>
                 </Button>
               </CardContent>
@@ -94,36 +108,40 @@ export default function ContactPage() {
           {/* Process */}
           <div className="bg-muted/20 rounded-2xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Hoe werkt het intake proces?
+              How does the intake process work?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
                 {
                   step: "1",
-                  title: "Plan het gesprek",
-                  description: "Kies de methode die jou het beste uitkomt: Calendly, WhatsApp of email",
-                  icon: Calendar
+                  title: "Schedule the call",
+                  description:
+                    "Choose the method that works best for you: Calendly, WhatsApp or email",
+                  icon: Calendar,
                 },
                 {
                   step: "2",
-                  title: "15-min kennismaking",
-                  description: "Gratis video call waarin we je doelen, ervaring en verwachtingen bespreken",
-                  icon: Clock
+                  title: "15-min introduction",
+                  description:
+                    "Free video call where we discuss your goals, experience and expectations",
+                  icon: Clock,
                 },
                 {
                   step: "3",
-                  title: "Programma advies",
-                  description: "Ik adviseer welk programma (1-op-1, groep, streams) het beste bij je past",
-                  icon: CheckCircle
+                  title: "Program advice",
+                  description:
+                    "I advise which program (1-on-1, group, streams) fits you best",
+                  icon: CheckCircle,
                 },
                 {
                   step: "4",
-                  title: "Jij beslist",
-                  description: "Geen druk, geen verplichtingen. Jij beslist of en wanneer je wilt starten",
-                  icon: CheckCircle
-                }
+                  title: "You decide",
+                  description:
+                    "No pressure, no obligations. You decide if and when you want to start",
+                  icon: CheckCircle,
+                },
               ].map((item) => {
-                const Icon = item.icon
+                const Icon = item.icon;
                 return (
                   <div key={item.step} className="text-center">
                     <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
@@ -131,9 +149,11 @@ export default function ContactPage() {
                     </div>
                     <Icon className="h-8 w-8 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -142,17 +162,17 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">Wat we bespreken</CardTitle>
+                <CardTitle className="text-xl">What we discuss</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {[
-                    "Je huidige ervaring met crypto trading",
-                    "Doelen en verwachtingen voor de toekomst", 
-                    "Beschikbare tijd voor leren en oefenen",
-                    "Welk programma het beste bij je situatie past",
-                    "Vragen over Smart Money Concepts",
-                    "Praktische details over de mentorship"
+                    "Your current experience with crypto trading",
+                    "Goals and expectations for the future",
+                    "Available time for learning and practicing",
+                    "Which program fits your situation best",
+                    "Questions about Smart Money Concepts",
+                    "Practical details about the mentorship",
                   ].map((item) => (
                     <li key={item} className="flex items-start space-x-3">
                       <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
@@ -165,17 +185,19 @@ export default function ContactPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">Wat je van mij kunt verwachten</CardTitle>
+                <CardTitle className="text-xl">
+                  What you can expect from me
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {[
-                    "Eerlijk advies zonder sales pressure",
-                    "Realistische verwachtingen over resultaten",
-                    "Transparantie over wat wel/niet mogelijk is",
-                    "Persoonlijke aandacht tijdens het gesprek",
-                    "Antwoorden op al je vragen",
-                    "Een no-obligation advies over vervolgstappen"
+                    "Honest advice without sales pressure",
+                    "Realistic expectations about results",
+                    "Transparency about what is/isn't possible",
+                    "Personal attention during the conversation",
+                    "Answers to all your questions",
+                    "A no-obligation advice about next steps",
                   ].map((item) => (
                     <li key={item} className="flex items-start space-x-3">
                       <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
@@ -190,38 +212,44 @@ export default function ContactPage() {
           {/* FAQ */}
           <div className="bg-muted/20 rounded-2xl p-8">
             <h2 className="text-2xl font-bold text-center mb-8">
-              Veelgestelde vragen over het intake
+              Frequently asked questions about the intake
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-2">Is het intake gesprek echt gratis?</h3>
+                  <h3 className="font-semibold mb-2">
+                    Is the intake call really free?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Ja, volledig gratis en zonder verplichtingen. Het is een kennismakingsgesprek 
-                    om te kijken of we een goede match zijn.
+                    Yes, completely free and without obligations. It's an
+                    introduction call to see if we're a good match.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Hoe lang duurt het gesprek?</h3>
+                  <h3 className="font-semibold mb-2">
+                    How long does the call take?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Ongeveer 15 minuten. Genoeg tijd om elkaar te leren kennen en je vragen 
-                    te beantwoorden, maar niet te lang.
+                    About 15 minutes. Enough time to get to know each other and
+                    answer your questions, but not too long.
                   </p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-2">Moet ik me voorbereiden?</h3>
+                  <h3 className="font-semibold mb-2">Do I need to prepare?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Nee, gewoon jezelf zijn. Het kan helpen om na te denken over je doelen 
-                    en hoeveel tijd je beschikbaar hebt voor leren.
+                    No, just be yourself. It can help to think about your goals
+                    and how much time you have available for learning.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Wat als ik nog heel veel vragen heb?</h3>
+                  <h3 className="font-semibold mb-2">
+                    What if I have a lot of questions?
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Perfect! Dat is precies waarvoor het gesprek bedoeld is. We nemen de tijd 
-                    voor al je vragen.
+                    Perfect! That's exactly what the call is for. We'll take
+                    time for all your questions.
                   </p>
                 </div>
               </div>
@@ -230,5 +258,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -1,19 +1,20 @@
-import { Metadata } from 'next'
-import { HelpCircle } from 'lucide-react'
-import { FAQAccordion } from '@/components/FAQAccordion'
-import { CTABanner } from '@/components/CTABanner'
-import { generatePageMetadata } from '@/lib/seo'
-import { generateFAQSchema } from '@/data/schema'
+import { Metadata } from "next";
+import { HelpCircle } from "lucide-react";
+import { FAQAccordion } from "@/components/FAQAccordion";
+import { CTABanner } from "@/components/CTABanner";
+import { generatePageMetadata } from "@/lib/seo";
+import { generateFAQSchema } from "@/data/schema";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Veelgestelde Vragen (FAQ)',
-  description: 'Antwoorden op de meest gestelde vragen over onze crypto trading mentorship programmas met Smart Money Concepts.',
-  path: '/faq',
-})
+  title: "Frequently Asked Questions (FAQ)",
+  description:
+    "Answers to the most frequently asked questions about our crypto trading mentorship programs with Smart Money Concepts.",
+  path: "/faq",
+});
 
 export default function FAQPage() {
-  const faqSchema = generateFAQSchema()
-  
+  const faqSchema = generateFAQSchema();
+
   return (
     <>
       <script
@@ -22,7 +23,7 @@ export default function FAQPage() {
           __html: JSON.stringify(faqSchema),
         }}
       />
-      
+
       <section className="py-20 px-4">
         <div className="container max-w-4xl">
           <div className="text-center mb-16">
@@ -30,10 +31,11 @@ export default function FAQPage() {
               <HelpCircle className="h-8 w-8 text-primary" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Veelgestelde Vragen
+              Frequently Asked Questions
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Alle antwoorden op vragen over onze mentorship programma's, Smart Money Concepts en het leerproces.
+              All answers to questions about our mentorship programs, Smart
+              Money Concepts and the learning process.
             </p>
           </div>
 
@@ -41,17 +43,17 @@ export default function FAQPage() {
 
           <div className="mt-16 text-center bg-muted/20 rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">
-              Staat je vraag er niet bij?
+              Don't see your question?
             </h2>
             <p className="text-muted-foreground mb-6">
-              Geen probleem! Plan een gratis intake gesprek waarin we al je vragen kunnen bespreken 
-              en kijken welk programma het beste bij je past.
+              No problem! Schedule a free intake call where we can discuss all
+              your questions and see which program fits you best.
             </p>
             <CTABanner
               title=""
               description=""
-              primaryText="Plan gratis intake"
-              secondaryText="Stuur een email"
+              primaryText="Schedule free intake"
+              secondaryText="Send an email"
               className="!py-0 !bg-primary"
             />
           </div>
@@ -59,11 +61,11 @@ export default function FAQPage() {
       </section>
 
       <CTABanner
-        title="Klaar voor de volgende stap?"
-        description="Nu je alle informatie hebt, is het tijd om in actie te komen. Plan een gratis kennismakingsgesprek."
-        primaryText="Plan intake gesprek"
-        secondaryText="Bekijk programmas"
+        title="Ready for the next step?"
+        description="Now that you have all the information, it's time to take action. Schedule a free introduction call."
+        primaryText="Schedule intake call"
+        secondaryText="View programs"
       />
     </>
-  )
+  );
 }

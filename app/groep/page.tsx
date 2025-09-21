@@ -1,18 +1,31 @@
-import { Metadata } from 'next'
-import { Check, Users, MessageSquare, Calendar, DollarSign } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { CTABanner } from '@/components/CTABanner'
-import { generatePageMetadata } from '@/lib/seo'
-import { pricingTiers, disclaimer } from '@/data/pricing'
+import { Metadata } from "next";
+import {
+  Check,
+  Users,
+  MessageSquare,
+  Calendar,
+  DollarSign,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { CTABanner } from "@/components/CTABanner";
+import { generatePageMetadata } from "@/lib/seo";
+import { pricingTiers, disclaimer } from "@/data/pricing";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Groepsmentorship - Leer Samen Met Anderen',
-  description: 'Groepsmentorship voor crypto trading met Smart Money Concepts. Wekelijkse groepscalls, community en betaalbare prijs.',
-  path: '/groep',
-})
+  title: "Group Mentorship - Learn Together With Others",
+  description:
+    "Group mentorship for crypto trading with Smart Money Concepts. Weekly group calls, community and affordable price.",
+  path: "/groep",
+});
 
-const groupTier = pricingTiers.find(tier => tier.id === 'group')!
+const groupTier = pricingTiers.find((tier) => tier.id === "group")!;
 
 export default function GroepPage() {
   return (
@@ -24,11 +37,12 @@ export default function GroepPage() {
               Community Learning
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Groepsmentorship
+              Group Mentorship
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hetzelfde kwaliteitsvolle SMC curriculum, maar dan in een kleine groep van 
-              gemotiveerde traders. Leer van elkaar en van mij tegen een betaalbare prijs.
+              The same high-quality SMC curriculum, but in a small group of
+              motivated traders. Learn from each other and from me at an
+              affordable price.
             </p>
           </div>
 
@@ -37,12 +51,12 @@ export default function GroepPage() {
             <Card>
               <CardHeader>
                 <DollarSign className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Betaalbaar</CardTitle>
+                <CardTitle>Affordable</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Toegang tot professionele SMC training voor een fractie van de prijs 
-                  van 1-op-1 begeleiding.
+                  Access to professional SMC training for a fraction of the
+                  price of 1-on-1 guidance.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -50,12 +64,12 @@ export default function GroepPage() {
             <Card>
               <CardHeader>
                 <Users className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Kleine Groepen</CardTitle>
+                <CardTitle>Small Groups</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Maximaal 8-10 personen per groep zodat iedereen persoonlijke aandacht 
-                  en feedback krijgt.
+                  Maximum 8-10 people per group so everyone gets personal
+                  attention and feedback.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -67,8 +81,8 @@ export default function GroepPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Leer van medestudenten, deel ervaringen en motiveer elkaar om 
-                  consistent te blijven.
+                  Learn from fellow students, share experiences and motivate
+                  each other to stay consistent.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -76,12 +90,12 @@ export default function GroepPage() {
             <Card>
               <CardHeader>
                 <Calendar className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Flexibel Schema</CardTitle>
+                <CardTitle>Flexible Schedule</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Wekelijkse groepscalls op vaste tijden met opnames voor als je 
-                  een keer niet kan.
+                  Weekly group calls at fixed times with recordings for when you
+                  can't make it.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -90,21 +104,21 @@ export default function GroepPage() {
           {/* Comparison */}
           <div className="bg-muted/20 rounded-2xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Groep vs 1-op-1: Wat is het verschil?
+              Group vs 1-on-1: What's the difference?
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-6 text-center">
-                  Groepsmentorship Voordelen
+                  Group Mentorship Benefits
                 </h3>
                 <div className="space-y-4">
                   {[
-                    "Veel voordeliger dan 1-op-1 begeleiding",
-                    "Leren van verschillende trading styles",
-                    "Community support en accountability",
-                    "Verschillende perspectieven en vragen",
-                    "Networking met medestudenten",
-                    "Minder druk, meer ontspannen leeromgeving"
+                    "Much more affordable than 1-on-1 guidance",
+                    "Learn from different trading styles",
+                    "Community support and accountability",
+                    "Different perspectives and questions",
+                    "Networking with fellow students",
+                    "Less pressure, more relaxed learning environment",
                   ].map((item) => (
                     <div key={item} className="flex items-start space-x-3">
                       <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
@@ -116,20 +130,22 @@ export default function GroepPage() {
 
               <div>
                 <h3 className="text-xl font-semibold mb-6 text-center">
-                  Wat je mist t.o.v. 1-op-1
+                  What you miss vs 1-on-1
                 </h3>
                 <div className="space-y-4">
                   {[
-                    "Minder persoonlijke aandacht per sessie",
-                    "Geen maatwerk curriculum",
-                    "Geen WhatsApp support tussen sessies",
-                    "Minder tijd voor individuele trade reviews",
-                    "Geen flexibiliteit in timing van sessies",
-                    "Focus ligt op groepsbehoeften, niet individueel"
+                    "Less personal attention per session",
+                    "No custom curriculum",
+                    "No WhatsApp support between sessions",
+                    "Less time for individual trade reviews",
+                    "No flexibility in session timing",
+                    "Focus is on group needs, not individual",
                   ].map((item) => (
                     <div key={item} className="flex items-start space-x-3">
                       <div className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{item}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -139,23 +155,29 @@ export default function GroepPage() {
 
           {/* What's Included */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Wat krijg je?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              What do you get?
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                {groupTier.features.slice(0, Math.ceil(groupTier.features.length / 2)).map((feature) => (
-                  <div key={feature} className="flex items-start space-x-3">
-                    <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
+                {groupTier.features
+                  .slice(0, Math.ceil(groupTier.features.length / 2))
+                  .map((feature) => (
+                    <div key={feature} className="flex items-start space-x-3">
+                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
               </div>
               <div className="space-y-4">
-                {groupTier.features.slice(Math.ceil(groupTier.features.length / 2)).map((feature) => (
-                  <div key={feature} className="flex items-start space-x-3">
-                    <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
+                {groupTier.features
+                  .slice(Math.ceil(groupTier.features.length / 2))
+                  .map((feature) => (
+                    <div key={feature} className="flex items-start space-x-3">
+                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
@@ -187,27 +209,29 @@ export default function GroepPage() {
 
           {/* Schedule */}
           <div className="bg-muted/20 rounded-2xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8">Groepssessie Schema</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">
+              Group Session Schedule
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  day: "Dinsdag",
+                  day: "Tuesday",
                   time: "20:00 - 21:30 CET",
-                  topic: "Theorie & Concepten",
-                  description: "Nieuwe SMC concepten, uitleg en voorbeelden"
+                  topic: "Theory & Concepts",
+                  description: "New SMC concepts, explanations and examples",
                 },
                 {
-                  day: "Donderdag", 
+                  day: "Thursday",
                   time: "20:00 - 21:30 CET",
-                  topic: "Praktijk & Analyse",
-                  description: "Chart analyse oefeningen en trade reviews"
+                  topic: "Practice & Analysis",
+                  description: "Chart analysis exercises and trade reviews",
                 },
                 {
-                  day: "Zondag",
-                  time: "19:00 - 20:00 CET", 
+                  day: "Sunday",
+                  time: "19:00 - 20:00 CET",
                   topic: "Q&A & Planning",
-                  description: "Vragen beantwoorden en week planning"
-                }
+                  description: "Answering questions and weekly planning",
+                },
               ].map((session) => (
                 <Card key={session.day}>
                   <CardHeader>
@@ -216,14 +240,16 @@ export default function GroepPage() {
                   </CardHeader>
                   <CardContent>
                     <h4 className="font-semibold mb-2">{session.topic}</h4>
-                    <p className="text-sm text-muted-foreground">{session.description}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {session.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <div className="text-center mt-8">
               <p className="text-sm text-muted-foreground">
-                Alle sessies worden opgenomen. Kan je niet live? Kijk later terug!
+                All sessions are recorded. Can't join live? Watch back later!
               </p>
             </div>
           </div>
@@ -238,11 +264,11 @@ export default function GroepPage() {
       </section>
 
       <CTABanner
-        title="Join de volgende groep"
-        description="Plekken zijn beperkt tot 10 personen per groep. Plan een intake gesprek om te zien of groepsmentorship bij je past."
-        primaryText="Plan intake"
-        secondaryText="Vergelijk opties"
+        title="Join the next group"
+        description="Spots are limited to 10 people per group. Schedule an intake call to see if group mentorship fits you."
+        primaryText="Schedule intake"
+        secondaryText="Compare options"
       />
     </>
-  )
+  );
 }

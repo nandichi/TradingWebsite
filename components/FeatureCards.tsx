@@ -1,9 +1,22 @@
-"use client"
+"use client";
 
-import { BookOpen, CheckSquare, MessageCircle, Shield, FileText, Users } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { siteConfig } from "@/data/site"
-import { motion } from "framer-motion"
+import {
+  BookOpen,
+  CheckSquare,
+  MessageCircle,
+  Shield,
+  FileText,
+  Users,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { siteConfig } from "@/data/site";
+import { motion } from "framer-motion";
 
 const iconMap = {
   BookOpen,
@@ -12,7 +25,7 @@ const iconMap = {
   Shield,
   FileText,
   Users,
-}
+};
 
 export function FeatureCards() {
   return (
@@ -20,17 +33,17 @@ export function FeatureCards() {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Waarom kiezen voor mijn mentorship?
+            Why choose my mentorship?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Een complete aanpak die verder gaat dan alleen technische analyse
+            A complete approach that goes beyond just technical analysis
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {siteConfig.features.map((feature, index) => {
-            const Icon = iconMap[feature.icon as keyof typeof iconMap]
-            
+            const Icon = iconMap[feature.icon as keyof typeof iconMap];
+
             return (
               <motion.div
                 key={feature.title}
@@ -53,10 +66,10 @@ export function FeatureCards() {
                   </CardContent>
                 </Card>
               </motion.div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

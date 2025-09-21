@@ -1,10 +1,16 @@
-"use client"
+"use client";
 
-import { Clock, CheckCircle } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { curriculumModules, learningOutcomes } from "@/data/curriculum"
-import { motion } from "framer-motion"
+import { Clock, CheckCircle } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { curriculumModules, learningOutcomes } from "@/data/curriculum";
+import { motion } from "framer-motion";
 
 export function CurriculumModules() {
   return (
@@ -15,7 +21,8 @@ export function CurriculumModules() {
             Complete Smart Money Concepts Curriculum
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Een gestructureerd 20-weken programma van basis tot gevorderde trading strategieën
+            A structured 20-week program from basic to advanced trading
+            strategies
           </p>
         </div>
 
@@ -44,7 +51,10 @@ export function CurriculumModules() {
                 <CardContent>
                   <ul className="space-y-2">
                     {module.topics.map((topic, topicIndex) => (
-                      <li key={topicIndex} className="flex items-start space-x-2 text-sm">
+                      <li
+                        key={topicIndex}
+                        className="flex items-start space-x-2 text-sm"
+                      >
                         <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                         <span>{topic}</span>
                       </li>
@@ -65,7 +75,7 @@ export function CurriculumModules() {
           className="bg-muted/20 rounded-2xl p-8"
         >
           <h3 className="text-2xl font-bold text-center mb-8">
-            Wat je leert in dit programma
+            What you learn in this program
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {learningOutcomes.map((outcome, index) => (
@@ -78,5 +88,5 @@ export function CurriculumModules() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

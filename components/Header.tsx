@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { siteConfig } from "@/data/site"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { siteConfig } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 export function Header() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -39,18 +39,14 @@ export function Header() {
         <div className="flex items-center space-x-4">
           <Button asChild className="hidden md:inline-flex">
             <Link href={siteConfig.contact.calendlyUrl}>
-              Plan een intake
+              Schedule an intake
             </Link>
           </Button>
 
           {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                className="md:hidden"
-                size="icon"
-              >
+              <Button variant="ghost" className="md:hidden" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
@@ -73,7 +69,7 @@ export function Header() {
                 ))}
                 <Button asChild className="mt-4">
                   <Link href={siteConfig.contact.calendlyUrl}>
-                    Plan een intake
+                    Schedule an intake
                   </Link>
                 </Button>
               </div>
@@ -82,5 +78,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
