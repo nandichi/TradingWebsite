@@ -18,7 +18,7 @@ export function Hero() {
           className="space-y-6"
         >
           <Badge variant="secondary" className="mb-4">
-            Free 15-min intake call
+            Free 15-min intake meeting
           </Badge>
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
