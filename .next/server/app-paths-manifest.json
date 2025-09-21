@@ -1,0 +1,12 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/page": "app/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/faq/page": "app/faq/page.js",
+  "/mentorship/page": "app/mentorship/page.js",
+  "/over/page": "app/over/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/groep/page": "app/groep/page.js",
+  "/streams/page": "app/streams/page.js"
+}

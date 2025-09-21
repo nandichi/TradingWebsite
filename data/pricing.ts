@@ -1,25 +1,5 @@
 export const pricingTiers = [
   {
-    id: "one-on-one",
-    name: "1-on-1 Mentorship",
-    subtitle: "Personal journey with maximum attention",
-    price: "€999/month (placeholder)",
-    description:
-      "The most intensive guidance with full personal attention and customization.",
-    popular: true,
-    features: [
-      "Weekly 1 session (60-90 min)",
-      "Personal custom roadmap",
-      "Live trade reviews and feedback",
-      "DM support during office hours",
-      "Access to all templates and tools",
-      "Personal WhatsApp support",
-      "Monthly evaluation and adjustment",
-    ],
-    cta: "Start 1-on-1 mentorship",
-    href: "/contact",
-  },
-  {
     id: "group",
     name: "Group Mentorship",
     subtitle: "Same program, lower price – less 1-on-1 attention",
@@ -37,6 +17,26 @@ export const pricingTiers = [
       "Networking with fellow students",
     ],
     cta: "Join group mentorship",
+    href: "/contact",
+  },
+  {
+    id: "one-on-one",
+    name: "1-on-1 Mentorship",
+    subtitle: "Personal journey with maximum attention",
+    price: "€999/month (placeholder)",
+    description:
+      "The most intensive guidance with full personal attention and customization.",
+    popular: true,
+    features: [
+      "Weekly 1 session (60-90 min)",
+      "Personal custom roadmap",
+      "Live trade reviews and feedback",
+      "DM support during office hours",
+      "Access to all templates and tools",
+      "Personal WhatsApp support",
+      "Monthly evaluation and adjustment",
+    ],
+    cta: "Start 1-on-1 mentorship",
     href: "/contact",
   },
   {
