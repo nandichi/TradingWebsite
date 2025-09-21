@@ -98,7 +98,7 @@ export function CTABanner({
               ease: "linear",
             }}
           >
-            <Star className="w-4 h-4 text-yellow-400/20 fill-current" />
+            <Star className="w-4 h-4 text-gray-400/20 fill-current" />
           </motion.div>
         ))}
 
@@ -111,8 +111,8 @@ export function CTABanner({
         />
 
         {/* Ambient Gradients */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gray-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gray-700/5 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/2 rounded-full blur-3xl" />
       </div>
 
@@ -128,13 +128,13 @@ export function CTABanner({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-400/10 to-blue-400/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-400/10 to-gray-600/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
           >
-            <Sparkles className="w-5 h-5 text-green-400" />
+            <Sparkles className="w-5 h-5 text-gray-300" />
             <span className="text-white/90 font-medium">
               Ready to Start Your Journey?
             </span>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse" />
           </motion.div>
 
           {/* Main Heading */}
@@ -146,7 +146,7 @@ export function CTABanner({
           >
             {title.split(" ").slice(0, 3).join(" ")}
             <br />
-            <span className="bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">
               {title.split(" ").slice(3).join(" ")}
             </span>
           </motion.h2>
@@ -176,7 +176,7 @@ export function CTABanner({
             >
               <Link
                 href={siteConfig.contact.calendlyUrl}
-                className="relative z-10 inline-flex items-center space-x-3 bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600 text-black font-bold px-8 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-green-400/25 hover:shadow-green-400/40"
+                className="relative z-10 inline-flex items-center space-x-3 bg-gradient-to-r from-gray-300 to-gray-400 hover:from-gray-400 hover:to-gray-500 text-black font-bold px-8 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-gray-400/25 hover:shadow-gray-400/40"
               >
                 <Calendar className="w-5 h-5" />
                 <span className="text-lg">{primaryText}</span>
@@ -195,7 +195,7 @@ export function CTABanner({
 
               {/* Glow Effect */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-r from-gray-300 to-gray-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{
                   duration: 2,
@@ -233,7 +233,7 @@ export function CTABanner({
                 className="flex items-center space-x-3 text-white/80"
               >
                 <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-                  <indicator.icon className="w-5 h-5 text-green-400" />
+                  <indicator.icon className="w-5 h-5 text-gray-300" />
                 </div>
                 <span className="font-medium">{indicator.text}</span>
               </motion.div>
@@ -250,7 +250,7 @@ export function CTABanner({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <motion.div
-                  className="text-3xl font-bold text-green-400 mb-2"
+                  className="text-3xl font-bold text-gray-300 mb-2"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ type: "spring", stiffness: 200, delay: 1.3 }}
@@ -262,7 +262,7 @@ export function CTABanner({
 
               <div>
                 <motion.div
-                  className="text-3xl font-bold text-yellow-400 mb-2"
+                  className="text-3xl font-bold text-gray-300 mb-2"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ type: "spring", stiffness: 200, delay: 1.4 }}
@@ -275,7 +275,7 @@ export function CTABanner({
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-4 h-4 text-yellow-400 fill-current"
+                        className="w-4 h-4 text-gray-300 fill-current"
                       />
                     ))}
                   </div>
@@ -284,7 +284,7 @@ export function CTABanner({
 
               <div>
                 <motion.div
-                  className="text-3xl font-bold text-blue-400 mb-2"
+                  className="text-3xl font-bold text-gray-300 mb-2"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ type: "spring", stiffness: 200, delay: 1.5 }}

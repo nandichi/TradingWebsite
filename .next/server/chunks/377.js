@@ -1,0 +1,1 @@
+"use strict";exports.id=377,exports.ids=[377],exports.modules={9377:(e,t,s)=>{s.r(t),s.d(t,{default:()=>o});let o=(0,s(8570).createProxy)(String.raw`/home/naoufal/Documents/sites/TradingWebsite/app/over/AboutPageContent.tsx#default`)}};
