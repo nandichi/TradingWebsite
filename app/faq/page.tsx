@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { HelpCircle } from "lucide-react";
-import { FAQAccordion } from "@/components/FAQAccordion";
+import { FAQAccordionLight } from "@/components/FAQAccordionLight";
 import { CTABanner } from "@/components/CTABanner";
 import { generatePageMetadata } from "@/lib/seo";
 import { generateFAQSchema } from "@/data/schema";
@@ -39,7 +39,7 @@ export default function FAQPage() {
             </p>
           </div>
 
-          <FAQAccordion />
+          <FAQAccordionLight />
 
           <div className="mt-16 text-center bg-muted/20 rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">
