@@ -1,0 +1,131 @@
+export const curriculumModules = [
+  {
+    id: "market-structure",
+    title: "Marktstructuur & Trend Analysis",
+    duration: "Week 1-2",
+    topics: [
+      "Higher Highs & Higher Lows identificeren",
+      "Lower Highs & Lower Lows herkennen",
+      "Trend changes en momentum shifts",
+      "Support en resistance levels",
+      "Market phases: accumulation, distribution, trending",
+    ],
+  },
+  {
+    id: "bos-choch",
+    title: "Break of Structure (BOS) & Change of Character (CHOCH)",
+    duration: "Week 3-4",
+    topics: [
+      "BOS identificatie en bevestiging",
+      "CHOCH signalen en timing",
+      "Internal structure vs external structure",
+      "Multi-timeframe structuur analyse",
+      "Valse doorbraken herkennen",
+    ],
+  },
+  {
+    id: "premium-discount",
+    title: "Premium & Discount Zones",
+    duration: "Week 5-6",
+    topics: [
+      "50% retracement en fibonacci levels",
+      "Premium zone trading strategieën",
+      "Discount zone entry technieken",
+      "Range trading binnen zones",
+      "Optimale entry en exit timing",
+    ],
+  },
+  {
+    id: "liquidity",
+    title: "Liquidity Concepts",
+    duration: "Week 7-8",
+    topics: [
+      "Equal Highs (EQH) identificatie",
+      "Equal Lows (EQL) en sweep patterns",
+      "Liquidity grabs en stop hunts",
+      "Institutional order flow",
+      "Liquidity pools en market manipulation",
+    ],
+  },
+  {
+    id: "inducement",
+    title: "Inducement & Market Manipulation",
+    duration: "Week 9-10",
+    topics: [
+      "Inducement patterns herkennen",
+      "Fake moves en retail traps",
+      "Institutional vs retail sentiment",
+      "News trading en event manipulation",
+      "Smart money footprints",
+    ],
+  },
+  {
+    id: "order-blocks",
+    title: "Order Blocks & Institutional Levels",
+    duration: "Week 11-12",
+    topics: [
+      "Bullish en bearish order blocks",
+      "Order block validation en confirmatie",
+      "Timeframe correlatie van blocks",
+      "Breaker blocks en mitigated zones",
+      "Order block trading strategieën",
+    ],
+  },
+  {
+    id: "fvg",
+    title: "Fair Value Gaps (FVG)",
+    duration: "Week 13-14",
+    topics: [
+      "FVG identificatie en types",
+      "Imbalance trading strategieën",
+      "FVG fill expectations",
+      "Volume confirmation voor gaps",
+      "Multi-timeframe gap analyse",
+    ],
+  },
+  {
+    id: "risk-management",
+    title: "Risk & Money Management",
+    duration: "Week 15-16",
+    topics: [
+      "Position sizing en risk per trade",
+      "R-multiple en risk/reward ratios",
+      "Portfolio diversificatie",
+      "Drawdown management",
+      "Capital preservation strategieën",
+    ],
+  },
+  {
+    id: "psychology",
+    title: "Trading Psychology & Routine",
+    duration: "Week 17-18",
+    topics: [
+      "Emotie management tijdens trading",
+      "Discipline en consistency",
+      "Trading routine ontwikkeling",
+      "Journal schrijven en self-analyse",
+      "FOMO en revenge trading voorkomen",
+    ],
+  },
+  {
+    id: "playbook",
+    title: "Personal Playbook Development",
+    duration: "Week 19-20",
+    topics: [
+      "Persoonlijke trading strategie",
+      "Setup checklists en criteria",
+      "Market condition filtering",
+      "Performance tracking en KPI's",
+      "Continuous improvement proces",
+    ],
+  },
+]
+
+export const learningOutcomes = [
+  "Volledig begrip van Smart Money Concepts en institutional trading",
+  "Zelfstandig kunnen analyseren van market structure en trends",
+  "Effectief risicobeheer en position sizing toepassen",
+  "Discipline en emotional control tijdens het traden",
+  "Eigen trading playbook en routine ontwikkelen",
+  "Consistent profitable trading strategieën uitvoeren",
+]
