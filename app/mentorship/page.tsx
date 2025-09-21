@@ -10,13 +10,14 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { CurriculumModules } from "@/components/CurriculumModules";
 import { CTABanner } from "@/components/CTABanner";
+import { PricingCard } from "@/components/PricingCard";
 import { generatePageMetadata } from "@/lib/seo";
 import { pricingTiers, disclaimer } from "@/data/pricing";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "1-on-1 Mentorship - Personal Trading Guidance",
   description:
-    "Intensive 1-on-1 crypto trading mentorship with Smart Money Concepts. Weekly sessions, personal roadmap and direct feedback.",
+    "Intensive 1-on-1 crypto trading mentorship with Smart Money Concepts. 10 structured lessons with personal roadmap and direct feedback.",
   path: "/mentorship",
 });
 
@@ -36,7 +37,7 @@ export default function MentorshipPage() {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The most intensive form of guidance with full personal attention.
-              Custom training specifically for your trading goals and
+              10 structured lessons specifically designed for your trading goals and
               challenges.
             </p>
           </div>
@@ -59,12 +60,12 @@ export default function MentorshipPage() {
             <Card>
               <CardHeader>
                 <Target className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Custom Curriculum</CardTitle>
+                <CardTitle>Structured Curriculum</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Your learning path is completely adapted to your experience,
-                  available time and specific trading goals.
+                  10 proven lessons covering everything from market structure to 
+                  long-term consistency. Each lesson builds on the previous one.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -77,7 +78,7 @@ export default function MentorshipPage() {
               <CardContent>
                 <CardDescription>
                   WhatsApp access during office hours for direct questions and
-                  real-time feedback on your trades.
+                  real-time feedback on your trades and homework.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -131,12 +132,9 @@ export default function MentorshipPage() {
                 <p className="text-muted-foreground mb-6">
                   {oneOnOneTier.description}
                 </p>
-                <CTABanner
-                  title=""
-                  description=""
+                <PricingCard
                   primaryText={oneOnOneTier.cta}
                   secondaryText="More info"
-                  className="!py-0 !bg-primary"
                 />
               </CardContent>
             </Card>
@@ -159,13 +157,13 @@ export default function MentorshipPage() {
                   step: "2",
                   title: "Personal Roadmap",
                   description:
-                    "Custom-made curriculum based on your experience and goals",
+                    "Start with lesson 1 and progress through all 10 structured lessons",
                 },
                 {
                   step: "3",
                   title: "Weekly Sessions",
                   description:
-                    "60-90 min personal sessions with theory, practice and Q&A",
+                    "60-90 min personal sessions with theory, practice, homework review and Q&A",
                 },
                 {
                   step: "4",

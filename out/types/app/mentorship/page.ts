@@ -1,4 +1,4 @@
-// File: /Users/naoufalandichi/projecten/TradingWebsite/app/mentorship/page.tsx
+// File: /home/naoufal/Documents/sites/TradingWebsite/app/mentorship/page.tsx
 import * as entry from '../../../../app/mentorship/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

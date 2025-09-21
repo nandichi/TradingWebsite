@@ -1,4 +1,4 @@
-// File: /Users/naoufalandichi/projecten/TradingWebsite/app/over/page.tsx
+// File: /home/naoufal/Documents/sites/TradingWebsite/app/over/page.tsx
 import * as entry from '../../../../app/over/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

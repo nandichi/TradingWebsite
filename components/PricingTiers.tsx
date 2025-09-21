@@ -110,7 +110,7 @@ export function PricingTiers() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed"
           >
-            From personal guidance to livestreams - there's something for
+            From personal 1-on-1 guidance to group sessions and livestreams - there's something for
             everyone.
             <br />
             Start your professional trading journey today.

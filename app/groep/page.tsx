@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CTABanner } from "@/components/CTABanner";
+import { PricingCard } from "@/components/PricingCard";
 import { generatePageMetadata } from "@/lib/seo";
 import { pricingTiers, disclaimer } from "@/data/pricing";
 
@@ -135,7 +136,7 @@ export default function GroepPage() {
                 <div className="space-y-4">
                   {[
                     "Less personal attention per session",
-                    "No custom curriculum",
+                    "No custom curriculum (follows group pace)",
                     "No WhatsApp support between sessions",
                     "Less time for individual trade reviews",
                     "No flexibility in session timing",
@@ -196,12 +197,9 @@ export default function GroepPage() {
                 <p className="text-muted-foreground mb-6">
                   {groupTier.description}
                 </p>
-                <CTABanner
-                  title=""
-                  description=""
+                <PricingCard
                   primaryText={groupTier.cta}
                   secondaryText="Plan intake"
-                  className="!py-0 !bg-primary"
                 />
               </CardContent>
             </Card>

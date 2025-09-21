@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CTABanner } from "@/components/CTABanner";
+import { PricingCard } from "@/components/PricingCard";
 import { generatePageMetadata } from "@/lib/seo";
 import {
   streamSchedule,
@@ -240,12 +241,9 @@ export default function StreamsPage() {
                     </div>
                   ))}
                 </div>
-                <CTABanner
-                  title=""
-                  description=""
+                <PricingCard
                   primaryText={streamTier.cta}
                   secondaryText="Plan intake"
-                  className="!py-0 !bg-primary"
                 />
               </CardContent>
             </Card>

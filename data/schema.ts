@@ -65,7 +65,7 @@ export function generateServiceSchema() {
       "@type": "Offer",
       name: tier.name,
       description: tier.subtitle,
-      price: tier.price.split(" ")[0].replace("€", "").replace("/maand", ""),
+      price: tier.price.split("/")[0].replace("€", ""),
       priceCurrency: "EUR",
       priceValidUntil: "2024-12-31",
       availability: "InStock",

@@ -1,8 +1,7 @@
 {
   "/page": "app/page.js",
+  "/over/page": "app/over/page.js",
   "/mentorship/page": "app/mentorship/page.js",
   "/groep/page": "app/groep/page.js",
-  "/faq/page": "app/faq/page.js",
-  "/over/page": "app/over/page.js",
   "/streams/page": "app/streams/page.js"
 }
