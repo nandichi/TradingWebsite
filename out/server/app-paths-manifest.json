@@ -3,5 +3,5 @@
   "/page": "app/page.js",
   "/mentorship/page": "app/mentorship/page.js",
   "/faq/page": "app/faq/page.js",
-  "/over/page": "app/over/page.js"
+  "/streams/page": "app/streams/page.js"
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Calendar, ChevronDown, Star } from "lucide-react";
 import { siteConfig } from "@/data/site";
@@ -13,6 +14,8 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -73,8 +76,14 @@ export function Header() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link href="/" className="flex items-center space-x-3 group">
-                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-black font-bold text-lg">A</span>
+                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                  <Image
+                    src="/Logo-Aaron.png"
+                    alt="Aaron Hayden Logo"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="hidden sm:block">
                   <span className="text-xl font-bold text-white group-hover:text-white/80 transition-colors duration-300">

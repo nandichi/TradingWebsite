@@ -29,6 +29,8 @@ export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
@@ -60,11 +62,11 @@ export function Hero() {
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
               }}
               animate={{
-                y: [null, Math.random() * window.innerHeight],
+                y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)],
                 opacity: [0.3, 0.8, 0.3],
               }}
               transition={{

@@ -53,12 +53,12 @@ export function FAQAccordion({ maxItems }: FAQAccordionProps) {
             key={i}
             className="absolute text-white/5 text-6xl font-bold"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
               rotate: Math.random() * 360,
             }}
             animate={{
-              y: [null, Math.random() * window.innerHeight],
+              y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)],
               rotate: 360,
             }}
             transition={{

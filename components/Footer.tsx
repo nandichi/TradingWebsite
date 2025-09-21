@@ -29,6 +29,8 @@ export function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
@@ -38,7 +40,9 @@ export function Footer() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const containerVariants = {
